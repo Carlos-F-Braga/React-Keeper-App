@@ -12,7 +12,8 @@ function App() {
        <Note
           key={noteItem.key}
           title={noteItem.title}
-          content={noteItem.content}>
+          content={noteItem.content}
+          info={noteItem.info}>
         </Note>
       )}
       <Footer />
