@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 function CreateArea(props) {
+    const baseBody = {
+      title: '',
+      content: ''
+    }
 
-    const [note, setNote] = useState({
-        title: '',
-        content: ''
-    })
+    const [note, setNote] = useState(baseBody)
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -21,6 +22,7 @@ function CreateArea(props) {
     const submitNote = (event) => {
         props.onAdd(note)
         event.preventDefault()
+        setNote(baseBody)
     }
 
   return (
